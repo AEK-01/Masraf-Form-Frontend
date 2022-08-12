@@ -1,0 +1,98 @@
+
+
+
+
+<div class="row">
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="row-xl-12">
+      <div class="col-lg" style="background-color: rgb(16, 27, 124);">
+        <table class="table mat-paginator">
+          <thead style="color: rgb(230, 231, 238);">
+            <tr>
+              <th>Tarih</th>
+              <th>Fiş Türü</th>
+              <th>Şirket</th>
+              <th>Açıklama</th>
+              <th>Toplam Tutar</th>
+              <th>Kdv</th>
+              <th>Fiş No</th>
+            </tr>
+          </thead>
+      
+          <tbody>
+            <tr *ngFor="let fis of fisler" style="color: rgb(255, 255, 0);">
+              <td>{{fis.date | date}} </td>
+              <td>{{fis.fisType}}</td>
+              <td>{{fis.company}}</td>
+              <td>{{fis.description}}</td>
+              <td>{{fis.totalCost}}</td>
+              <td>{{fis.vatValue}}</td>
+              <td>{{fis.fisNo}}</td>
+              <img src="{{fis.fisImage}}" class="rounded float-start" alt="..." width="100" height="100">
+              <button class="btn btn-warning" style="color: rgb(253, 253, 253);" (click)="delete(fis)" (click)="getFisler()">sil</button>
+            </tr>
+      
+          </tbody>
+      </table>  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+      <div class="btn-group-vertical gap-2">
+          <a class="btn btn-fill btn-secondary" href="fis/add">Fiş Ekle</a>
+          <a href="" class="btn btn-secondary" aria-current="page">Ana Menü</a>
+      </div>
+  </div>
+
+</div>
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
