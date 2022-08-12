@@ -5,6 +5,8 @@ import { Fis } from 'src/app/models/fis';
 import { FisService } from 'src/app/services/fis.service';
 import {FormGroup,FormBuilder, FormControl, Validators} from "@angular/forms"
 import { HttpClient } from '@angular/common/http';
+import { transition } from '@angular/animations';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-fis',
@@ -45,7 +47,7 @@ export class FisComponent implements OnInit {
   delete(fis:Fis)
   {
     this.fisService.delete(fis).subscribe();
-    this.toastrService.success("Helal aslanıma")
+    this.toastrService.success("Fiş silindi")
   }
   reloadPage() {
     window.location.reload();
@@ -58,6 +60,16 @@ export class FisComponent implements OnInit {
     
     imaj.src = binCod;
     return imaj
+ }
+ getFisImage(fis:Fis)
+ {
+    return fis.fisImage;
+ }
+ reloadFisler()
+ {
+     setTimeout(() => {
+      this.getFisler();
+      }, 100);
  }
  
 }
