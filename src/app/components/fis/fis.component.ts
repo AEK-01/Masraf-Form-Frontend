@@ -39,11 +39,6 @@ export class FisComponent implements OnInit {
     }) 
   }
 
-
-  add()
-  {
-    
-  }
   delete(fis:Fis)
   {
     this.fisService.delete(fis).subscribe();

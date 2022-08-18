@@ -1,100 +1,61 @@
+<div class="row" style="background-color: rgba(255, 255, 255, 0.250)">
+  <div class="container-fluid" >
+    <div class="row">
+      <div class="row-xl-12">
+        <div class="col-lg">
+          <table
+            class="table"
+            
+          >
+            <thead style="color: rgb(255, 255, 255)">
+              <tr>
+                <th>Tarih</th>
+                <th>Fiş Türü</th>
+                <th>Şirket</th>
+                <th>Açıklama</th>
+                <th>Toplam Tutar</th>
+                <th>Kdv</th>
+                <th>Fiş No</th>
+              </tr>
+            </thead>
 
+            <tbody>
+              <tr *ngFor="let fis of fisler" style="color: rgb(255, 255, 255)">
+                <td>{{ fis.date | date }}</td>
+                <td>{{ fis.fisType }}</td>
+                <td>{{ fis.company }}</td>
+                <td>{{ fis.description }}</td>
+                <td>{{ fis.totalCost }}</td>
+                <td>{{ fis.vatValue }}</td>
+                <td>{{ fis.fisNo }}</td>
+                <button
+                  class="btn btn-light"
+                  style="color: rgb(253, 253, 253)"
+                  (click)="getFisImage(fis)">foti</button>
 
+                <button
+                  class="btn btn-light"
+                  style="color: rgb(253, 253, 253)"
+                  (click)="delete(fis)"
+                  (click)="reloadFisler()">sil</button>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-<div class="row">
-<div class="container-fluid">
-  <div class="row">
-
-    <div class="row-xl-12">
-      <div class="col-lg" style="background-color: rgb(240, 39, 187);">
-        <table class="table mat-paginator">
-          <thead style="color: rgb(230, 231, 238);">
-            <tr>
-              <th>Tarih</th>
-              <th>Fiş Türü</th>
-              <th>Şirket</th>
-              <th>Açıklama</th>
-              <th>Toplam Tutar</th>
-              <th>Kdv</th>
-              <th>Fiş No</th>
-            </tr>
-          </thead>
-      
-          <tbody>
-            <tr *ngFor="let fis of fisler" style="color: rgb(255, 255, 255);">
-              <td>{{fis.date | date}} </td>
-              <td>{{fis.fisType}}</td>
-              <td>{{fis.company}}</td>
-              <td>{{fis.description}}</td>
-              <td>{{fis.totalCost}}</td>
-              <td>{{fis.vatValue}}</td>
-              <td>{{fis.fisNo}}</td>
-              <button class="btn btn-info" style="color: rgb(253, 253, 253);" (click)="getFisImage(fis)" >foti</button>
-              
-
-              <button class="btn btn-info" style="color: rgb(253, 253, 253);" (click)="delete(fis)" (click)="reloadFisler()">sil</button>
-            </tr>
-      
-          </tbody>
-      </table>  
+  <div class="container">
+    <div class="row">
+      <div class="btn-group-vertical gap-2" style="color: rgb(255, 0, 0)">
+        <a
+          class="btn button btn-danger"
+          style="color: rgb(253, 253, 253)"
+          href="fis/add"
+          >Fiş Ekle</a>
+          <div class="mb-1"></div>
       </div>
     </div>
   </div>
 </div>
-
-
-<div class="container">
-  <div class="row">
-      <div class="btn-group-vertical gap-2">
-          <a class="btn btn-fill btn-info" style="color: rgb(253, 253, 253);" href="fis/add">Fiş Ekle</a>
-          <a href="" class="btn btn-info" style="color: rgb(253, 253, 253);" aria-current="page">Ana Menü</a>
-      </div>
-  </div>
-
-</div>
-
-</div>
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-  
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
- 

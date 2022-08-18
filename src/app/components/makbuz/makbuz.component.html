@@ -1,1 +1,60 @@
-<p>makbuz works!</p>
+<div class="row" style="background-color: rgba(255, 255, 255, 0.250)">
+    <div class="container-fluid" >
+      <div class="row">
+        <div class="row-xl-12">
+          <div class="col-lg">
+            <table
+              class="table"
+              
+            >
+              <thead style="color: rgb(255, 255, 255)">
+                <tr>
+                  <th>Tarih</th>
+                  <th>Şirket</th>
+                  <th>Adres</th>
+                  <th>Kişi İsmi</th>
+                  <th>Açıklama</th>
+                  <th>Toplam Tutar</th>
+                </tr>
+              </thead>
+  
+              <tbody>
+                <tr *ngFor="let makbuz of makbuzlar" style="color: rgb(255, 255, 255)">
+                  <td>{{ makbuz.date | date }}</td>
+                  <td>{{ makbuz.company }}</td>
+                  <td>{{ makbuz.address }}</td>
+                  <td>{{ makbuz.nameOfTheAuthor }}</td>
+                  <td>{{ makbuz.description }}</td>
+                  <td>{{ makbuz.totalCost }}</td>
+                  <button
+                    class="btn btn-info"
+                    style="color: rgb(253, 253, 253)"
+                    (click)="getMakbuzImage(makbuz)">foto</button>
+  
+                  <button
+                    class="btn btn-info"
+                    style="color: rgb(253, 253, 253)"
+                    (click)="delete(makbuz)"
+                    (click)="reloadMakbuzlar()">sil</button>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        <div class="btn-group-vertical gap-2" style="color: rgb(255, 0, 0)">
+          <a
+            class="btn button btn-danger"
+            style="color: rgb(253, 253, 253)"
+            href="makbuz/add"
+            >Makbuz Ekle</a>
+            <div class="mb-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

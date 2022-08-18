@@ -13,6 +13,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { FisAddComponent } from './components/fis-add/fis-add.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
+import { MakbuzAddComponent } from './components/makbuz-add/makbuz-add.component';
+import { SidebarModule } from 'ng-sidebar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MatCommonModule, MatLineModule, MatOptionModule, MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,7 @@ import { MainpageComponent } from './components/mainpage/mainpage.component';
     FisComponent,
     MakbuzComponent,
     LoginComponent,   
-    NaviComponent, FisAddComponent, MainpageComponent
+    NaviComponent, FisAddComponent, MainpageComponent, MakbuzAddComponent, SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,13 @@ import { MainpageComponent } from './components/mainpage/mainpage.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatSidenavModule,
     ReactiveFormsModule,
+    SidebarModule,
+    MatLineModule,
+    MatOptionModule,
+    MatCommonModule,
+    MatRippleModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
     })

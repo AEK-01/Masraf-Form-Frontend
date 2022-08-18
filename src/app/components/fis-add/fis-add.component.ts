@@ -50,7 +50,7 @@ export class FisAddComponent implements OnInit {
       let fisModel = Object.assign({},this.fisAddForm.value)
       
       this.fisService.add(fisModel).subscribe(response=>{
-        this.toastrService.success(response.message,"Fiş Ekleme")
+        this.toastrService.success(response.message,"Fiş Eklendi")
       },responseError=>{
         this.toastrService.warning(responseError.error.Errors,"Fişi ekledik ama sıkıntı var haberin ola")
       })

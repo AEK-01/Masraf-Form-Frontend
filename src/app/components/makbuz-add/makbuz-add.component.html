@@ -1,0 +1,140 @@
+
+
+<div class="table-secondary" style="background-color: rgba(0, 0, 0, 0.278)">
+  <div class="p-4"></div>
+
+  <form [formGroup]="makbuzAddForm" style="color: rgb(255, 255, 255)">
+    <div class="row">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <label for="date" class="form-group">Tarih</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            formControlName="date"
+          />
+        </div>
+
+        <div class="col-md-5">
+          <label for="totalCost" class="form-group">Makbuz Tutarı</label>
+          <input
+            type="number"
+            class="form-control"
+            id="totalCost"
+            formControlName="totalCost"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <div class="row-pl-5"></div>
+          <div class="p-3"></div>
+          <input
+            style="background-color: rgb(196, 194, 194)"
+            (change)="onFileSelected($event)"
+            type="file"
+            accept="image/*"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="p-3"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
+          <strong
+            ><h2
+              for="company"
+              class="text-nowrap bd-highlight"
+              style="stroke-width: 5cm"
+            >
+              Makbuzu Kesen Firma Bilgileri
+            </h2></strong
+          >
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <label for="company" class="form-group">Şirket</label>
+          <input
+            type="text"
+            class="form-control"
+            id="company"
+            formControlName="company"
+          />
+        </div>
+
+        <div class="col-md-5">
+          <label for="nameOfTheAuthor" class="form-group"
+            >Yetkili Ad Soyad</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="nameOfTheAuthor"
+            formControlName="nameOfTheAuthor"
+          />
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+          <div class="mb-2"></div>
+          <label for="address" class="form-group">Adres</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="address"
+            formControlName="address"
+            rows="3"
+          ></textarea>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+          <div class="mb-2"></div>
+          <label for="description" class="form-group">Açıklama</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="description"
+            formControlName="description"
+            rows="3"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="p-3"></div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="btn-group-vertical gap-2">
+        <a class="btn btn-fill btn-danger" (click)="add()">Ekle</a>
+        <a href="makbuz" class="btn btn-danger" aria-current="page"
+          >Makbuzları Görüntüle</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="p-4"></div>
+  <div class="p-4"></div>
+  <div class="p-4"></div>
+</div>

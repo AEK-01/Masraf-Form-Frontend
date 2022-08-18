@@ -1,9 +1,10 @@
 export interface Makbuz{
-    Id:number;
-    Date:string;
-    NameOfTheAuthor:string;
-    Address:string;
-    Description:string;
-    Company:string;
-    TotalCost:number;
+    id:number;
+    date:string;
+    nameOfTheAuthor:string;
+    company:string;
+    address:string;
+    description:string;
+    totalCost:number;
+    makbuzImage:string;
 }

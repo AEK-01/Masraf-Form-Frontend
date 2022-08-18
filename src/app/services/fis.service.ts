@@ -28,5 +28,4 @@ export class FisService {
     return this.httpClient.post<SingleResponseModel<Fis>>(this.apiUrl+"fis/delete",fis)
   }
 
-
 }
